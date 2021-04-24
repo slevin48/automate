@@ -1,0 +1,5 @@
+openpyxl
+python-docx
+pandas
+pywin32
+pillow
