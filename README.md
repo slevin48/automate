@@ -2,6 +2,8 @@
 
 https://towardsdatascience.com/automate-microsoft-excel-and-word-using-python-ab92713b4ffe
 
+https://automatetheboringstuff.com/2e/chapter13/
+
 ![Photo by Isaac Smith on Unsplash](https://miro.medium.com/max/1050/0*RoXfMFgqrbPi4q5M)
 ```
 pip install openpyxl
