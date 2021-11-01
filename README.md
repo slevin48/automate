@@ -1,9 +1,5 @@
 # Automate Excel and Word using Python
 
-https://towardsdatascience.com/automate-microsoft-excel-and-word-using-python-ab92713b4ffe
-
-https://automatetheboringstuff.com/2e/chapter13/
-
 ![Photo by Isaac Smith on Unsplash](https://miro.medium.com/max/1050/0*RoXfMFgqrbPi4q5M)
 ```
 pip install openpyxl
@@ -18,18 +14,28 @@ We get the price of real estate in Paris 14 from the following gist: https://gis
 Adding manually a second sheet selecting only the surface and price
 
 ```python
-workbook = xl.load_workbook('dvf14.xlsx')
+workbook = xl.load_workbook('dvf14_chart.xlsx')
 sheet_2 = workbook['Sheet2']
 ```
-![immo_chart](immo_chart.png)
+![immo_chart](dvf14_chart.png)
 
 ```python
-values = Reference(sheet_2, min_row = 2, max_row = sheet_1.max_row, min_col = 2, max_col = 2)
-chart = LineChart()
+chart = ScatterChart()
+chart.title = "Scatter Chart"
+chart.style = 13
 chart.y_axis.title = 'Price'
-chart.x_axis.title = 'Index'
-chart.add_data(values)
-sheet_2.add_chart(chart, 'e2') 
+chart.x_axis.title = 'Surface'
+
+xvalues = Reference(sheet_2, min_col = 1, min_row = 2, max_row = sheet_1.max_row)
+values = Reference(sheet_2, min_col=2, min_row=1, max_row=mr)
+series = Series(values, xvalues,title_from_data=True)
+series.marker.symbol = "diamond"
+series.marker.graphicalProperties.solidFill = "0000FF" # Marker filling
+series.marker.graphicalProperties.line.solidFill = "0000FF" # Marker outline
+series.graphicalProperties.line.noFill = True  # hide lines
+chart.series.append(series)
+
+sheet_2.add_chart(chart, "D2")
 workbook.save('dvf14_chart.xlsx')
 ```
 
@@ -67,5 +73,9 @@ workbook_bis.Close(True)
 operation.Quit()
 ```
 
-![chart](chart.png)
+![chart](immo_chart.png)
 
+
+## Resources
+
+https://automatetheboringstuff.com/2e/chapter13/

@@ -1,5 +1,6 @@
 openpyxl
-python-docx
+# python-docx
 pandas
 pywin32
 pillow
+matplotlib
