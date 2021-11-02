@@ -75,7 +75,24 @@ operation.Quit()
 
 ![chart](immo_chart.png)
 
+## Create Word report
+
+```python
+from docx import Document
+
+document = Document()
+document.add_heading('Report on Excel and Word automation', 0)
+
+...
+
+document.save('dvf14_report.docx')
+```
+
+![report](report.png)
 
 ## Resources
 
-https://automatetheboringstuff.com/2e/chapter13/
+- https://automatetheboringstuff.com/2e/chapter13/
+- https://xkcd.com/1205/
+
+![is_it_worth_the_time](is_it_worth_the_time.png)
