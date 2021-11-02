@@ -76,6 +76,7 @@ operation.Quit()
 ![chart](immo_chart.png)
 
 ## Create Word report
+https://python-docx.readthedocs.io/en/latest/
 
 ```python
 from docx import Document
