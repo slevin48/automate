@@ -4,3 +4,7 @@ pandas
 pywin32
 pillow
 matplotlib
+beautifulsoup4
+lxml
+requests
+streamlit

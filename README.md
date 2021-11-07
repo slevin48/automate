@@ -1,9 +1,10 @@
-# Automate Excel and Word using Python
+# Automate Excel, Word and the Web using Python
 
 ![Photo by Isaac Smith on Unsplash](https://miro.medium.com/max/1050/0*RoXfMFgqrbPi4q5M)
 ```
 pip install openpyxl
 pip install python-docx
+pip install python-bs4
 ```
 
 ## Excel automation
@@ -91,9 +92,28 @@ document.save('dvf14_report.docx')
 
 ![report](report.png)
 
+## Scraping web pages with Beautiful Soup
+
+[Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+Example: [web_automate.ipynb](web_automate.ipynb)
+```python
+import requests as rq
+from bs4 import BeautifulSoup
+
+URL = 'https://realpython.github.io/fake-jobs/'
+page = rq.get(URL)
+soup = BeautifulSoup(page.content, "html.parser")
+res = soup.find_all(class_ = "location")
+open("location1.txt","w").write(res[0].text)
+```
+
+*Next: Web automation with Selenium*
+
 ## Resources
 
 - https://automatetheboringstuff.com/2e/chapter13/
+- https://realpython.com/beautiful-soup-web-scraper-python/
 - https://xkcd.com/1205/
 
 ![is_it_worth_the_time](is_it_worth_the_time.png)
