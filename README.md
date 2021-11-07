@@ -7,6 +7,12 @@ pip install python-docx
 pip install python-bs4
 ```
 
+## Excel Sheet Splitter
+
+Streamlit app to split sheets of Excel files
+
+![split-sheet-app.webm](split-sheet-app.webm)
+
 ## Excel automation
 https://openpyxl.readthedocs.io/en/stable/
 
