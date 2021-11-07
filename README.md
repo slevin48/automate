@@ -11,7 +11,7 @@ pip install python-bs4
 
 Streamlit app to split sheets of Excel files
 
-![split-sheet-app.webm](split-sheet-app.webm)
+![split-sheet-app](split-sheet-app.mp4)
 
 ## Excel automation
 https://openpyxl.readthedocs.io/en/stable/
