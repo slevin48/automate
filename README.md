@@ -9,7 +9,7 @@ pip install python-bs4
 
 ## Excel Sheet Splitter
 
-Streamlit app to split sheets of Excel files
+Streamlit app to split sheets of Excel files: https://excel-splitter-48.herokuapp.com/
 
 ![split-sheet-app](split-sheet-app.mp4)
 

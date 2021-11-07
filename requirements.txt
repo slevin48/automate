@@ -1,7 +1,7 @@
 openpyxl
 # python-docx
 pandas
-pywin32
+# pywin32
 pillow
 matplotlib
 beautifulsoup4
