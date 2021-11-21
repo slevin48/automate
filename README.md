@@ -1,12 +1,5 @@
 # Automate Excel, Word and the Web using Python
 
-![Photo by Isaac Smith on Unsplash](https://miro.medium.com/max/1050/0*RoXfMFgqrbPi4q5M)
-```
-pip install openpyxl
-pip install python-docx
-pip install python-bs4
-```
-
 ## Excel Sheet Splitter
 
 Streamlit app to split sheets of Excel files: https://excel-splitter-48.herokuapp.com/
