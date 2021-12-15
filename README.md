@@ -1,6 +1,6 @@
 # Automate Excel, Word and the Web using Python
 
-## Excel Sheet Splitter
+## Excel Sheet Splitter [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/slevin48/automate/main/app.py)
 
 Streamlit app to split sheets of Excel files: https://excel-splitter-48.herokuapp.com/
 
