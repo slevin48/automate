@@ -111,7 +111,8 @@ open("location1.txt","w").write(res[0].text)
 
 ## Resources
 
-- https://automatetheboringstuff.com/2e/chapter13/
+- [Working with Excel Spreadsheet - Automate the boring Stuff](https://automatetheboringstuff.com/2e/chapter13/)
+- [Web Scraping - Automate the boring Stuff](https://automatetheboringstuff.com/chapter11/)
 - https://realpython.com/beautiful-soup-web-scraper-python/
 - https://xkcd.com/1205/
 
