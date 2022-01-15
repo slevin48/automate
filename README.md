@@ -113,6 +113,7 @@ open("location1.txt","w").write(res[0].text)
 
 - [Working with Excel Spreadsheet - Automate the boring Stuff](https://automatetheboringstuff.com/2e/chapter13/)
 - [Web Scraping - Automate the boring Stuff](https://automatetheboringstuff.com/2e/chapter12/)
+- [Video Selenium - Technology for Noobs](https://www.youtube.com/watch?v=id-HGghty6c) - [Sources](https://github.com/sharmasw/Data-Science-with-python/tree/master/selenium)
 - https://realpython.com/beautiful-soup-web-scraper-python/
 - https://xkcd.com/1205/
 
