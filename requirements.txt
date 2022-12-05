@@ -8,3 +8,4 @@ beautifulsoup4
 lxml
 requests
 streamlit
+selenium

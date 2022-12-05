@@ -132,3 +132,4 @@ dmypy.json
 # Project specific
 
 jobs/
+chromedriver.exe

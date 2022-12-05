@@ -107,7 +107,59 @@ res = soup.find_all(class_ = "location")
 open("location1.txt","w").write(res[0].text)
 ```
 
-*Next: Web automation with Selenium*
+## Automate the browser interaction with Selenium
+
+### Installation
+
+| Browser | Webdriver |
+|---------|-----------------------------------------------|
+| Chrome: |	https://sites.google.com/chromium.org/driver/ |
+| Edge: |	https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/ |
+| Firefox: |	https://github.com/mozilla/geckodriver/releases |
+
+### Simple usage
+https://selenium-python.readthedocs.io/getting-started.html#simple-usage
+
+### Locating elements
+https://selenium-python.readthedocs.io/locating-elements.html
+
+Example usage:
+```python
+from selenium.webdriver.common.by import By
+
+driver.find_element(By.XPATH, '//button[text()="Some text"]')
+driver.find_elements(By.XPATH, '//button')
+```
+
+These are the attributes available for By class:
+```python
+ID = "id"
+XPATH = "xpath"
+LINK_TEXT = "link text"
+PARTIAL_LINK_TEXT = "partial link text"
+NAME = "name"
+TAG_NAME = "tag name"
+CLASS_NAME = "class name"
+CSS_SELECTOR = "css selector"
+```
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+url = "https://realpython.github.io/fake-jobs/"
+title = driver.find_element(by=By.CLASS_NAME, value="title")
+print(title.text)
+res = driver.find_elements(by=By.TAG_NAME, value="img")
+src = res[0].get_property('src')
+item = driver.find_elements(by=By.CLASS_NAME, value="card-footer-item")
+# Get apply link
+apply = [r for r in item[1::2]] # every other element of the list (starting at the second element)
+apply[0].click()
+# Or simply get location of the link
+href = apply[0].get_attribute('href')
+driver.get(href)
+```
 
 ## Resources
 
